@@ -7,31 +7,38 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "web": "nx run web:serve",
+    "ios": "nx run nativescript-ns:ios",
+    "android": "nx run nativescript-ns:android"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~13.2.0",
-    "@angular/common": "~13.2.0",
-    "@angular/compiler": "~13.2.0",
-    "@angular/core": "~13.2.0",
-    "@angular/forms": "~13.2.0",
-    "@angular/platform-browser": "~13.2.0",
-    "@angular/platform-browser-dynamic": "~13.2.0",
-    "@angular/router": "~13.2.0",
+    "@angular/animations": "^13.0.0",
+    "@angular/common": "^13.0.0",
+    "@angular/compiler": "^13.0.0",
+    "@angular/core": "^13.0.0",
+    "@angular/forms": "^13.0.0",
+    "@angular/platform-browser": "^13.0.0",
+    "@angular/platform-browser-dynamic": "^13.0.0",
+    "@angular/router": "^13.0.0",
     "@nrwl/angular": "13.9.6",
-    "rxjs": "~7.4.0",
+    "rxjs": "~7.5.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "^0.11.4",
+    "@nativescript/core": "~8.1.0",
+    "nativescript-theme-core": "~1.0.4",
+    "@nativescript/angular": "^13.0.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.2.0",
+    "@angular-devkit/build-angular": "^13.0.0",
     "@angular-eslint/eslint-plugin": "~13.0.1",
     "@angular-eslint/eslint-plugin-template": "~13.0.1",
     "@angular-eslint/template-parser": "~13.0.1",
     "@angular/cli": "~13.2.0",
-    "@angular/compiler-cli": "~13.2.0",
+    "@angular/compiler-cli": "^13.0.0",
     "@angular/language-service": "~13.2.0",
+    "@nativescript/nx": "^3.0.14",
     "@nrwl/cli": "13.9.6",
     "@nrwl/cypress": "13.9.6",
     "@nrwl/eslint-plugin-nx": "13.9.6",
@@ -52,6 +59,14 @@
     "nx": "13.9.6",
     "prettier": "^2.5.1",
     "ts-jest": "27.0.5",
-    "typescript": "~4.5.2"
+    "typescript": "~4.5.2",
+    "sass": "^1.32.0",
+    "@nativescript/webpack": "~5.0.0",
+    "@nativescript/types": "~8.1.0",
+    "@ngtools/webpack": "^13.0.0"
+  },
+  "nativescript-nx": {
+    "prefix": "",
+    "framework": "angular"
   }
 }
